@@ -14,7 +14,7 @@ RUN bun i --frozen-lockfile
 
 FROM base AS release
 COPY --from=install /app/Site/node_modules /app/Site/node_modules
-COPY Economy/client Economy/client
+COPY Economy /app/Economy
 COPY Assets Assets
 COPY Site Site
 COPY mercury.core.ts mercury.core.ts
