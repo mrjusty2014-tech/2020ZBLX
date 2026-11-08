@@ -19,7 +19,7 @@ COPY Assets Assets
 COPY Site Site
 COPY mercury.core.ts mercury.core.ts
 WORKDIR /app/Site
-RUN apt-get update && apt-get install -y curl golang-go && curl -sSf https://surrealdb.com | sh
+RUN apt-get update && apt-get install -y curl golang-go && curl -sSf https://install.surrealdb.com | sh
 ARG RCC_KEY
 ARG OPEN_CLOUD_KEY
 RUN bun run build
