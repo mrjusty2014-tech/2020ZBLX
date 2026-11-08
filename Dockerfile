@@ -19,9 +19,11 @@ COPY Assets Assets
 COPY Site Site
 COPY mercury.core.ts mercury.core.ts
 WORKDIR /app/Site
+
 RUN apt-get update && apt-get install -y curl && \
     curl -sSf https://surrealdb.com | sh && \
     ln -s /root/.surrealdb/bin/surreal /usr/local/bin/surreal
+
 ARG RCC_KEY
 ARG OPEN_CLOUD_KEY
 RUN bun run build
