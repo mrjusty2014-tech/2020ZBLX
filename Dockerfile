@@ -25,4 +25,4 @@ ARG OPEN_CLOUD_KEY
 RUN bun run build
 
 # # run the app
-CMD cd /app/Economy && go build -o economy_srv . && ./economy_srv & cd /app/Site && bun -b ./build
+CMD cd /app/Economy && go build -o economy_srv . && ./economy_srv -db=surreal -db-addr=127.0.0.1:8000 & cd /app/Site && bun -b ./build
