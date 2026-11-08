@@ -19,6 +19,8 @@ COPY Assets Assets
 COPY Site Site
 COPY mercury.core.ts mercury.core.ts
 WORKDIR /app/Site
+ARG RCC_KEY
+ARG OPEN_CLOUD_KEY
 RUN bun run build
 
 # # run the app
