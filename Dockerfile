@@ -25,4 +25,4 @@ ARG OPEN_CLOUD_KEY
 RUN bun run build
 
 # # run the app
-CMD cd /app/Economy && go build -o economy_srv . && ./economy_srv & cd /app/site && bun -b ./build
+CMD cd /app/Economy && go build -o economy_srv . && ./economy_srv & cd /app/Site && bun -b ./build
